@@ -1,0 +1,40 @@
+Setup the project:
+
+Step1: Import the project from file system
+Step2: Check whether all maven dependencies are downloaded
+Step3: Check spring-servlet.xml for your database' username and password.
+Step4: Prepare data in database
+
+Database Queries
+----------------
+create schema library;
+
+use library;
+
+CREATE TABLE books (
+  id int NOT NULL AUTO_INCREMENT,
+  title varchar(30) DEFAULT NULL,
+  author varchar(30) DEFAULT NULL,
+  genre varchar(15) DEFAULT NULL,
+  description text,
+  available tinyint(1) DEFAULT NULL,
+  tags varchar(50) DEFAULT NULL,
+  format varchar(50) DEFAULT NULL,
+  language varchar(10) DEFAULT NULL,
+  rating int DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+INSERT INTO books 
+(title, author, genre, description, available, tags, format, language, rating) 
+VALUES ('5 point someone','Chetan Bhagat','Drama','5 point someone tells us the tale of 3 friends who went into a premiere educational institute and their journey there',1,'Non-Fiction,Mystery','Paperback','Spanish',4);
+
+INSERT INTO books 
+(title, author, genre, description, available, tags, format, language, rating) 
+VALUES ('The Great Gatsby','F. Scott Fitzgerald','Fiction','A novel about the decadence of the Jazz Age. Wow',1,'Non-Fiction, Mystery','Hardcover','English',5);
+
+INSERT INTO books 
+(title, author, genre, description, available, tags, format, language, rating) 
+VALUES ('Let Us C','Yashwent','Programming','Good Book',1,'Non-Fiction','Paperback','English',5);
+
+Step3: Run the project
